@@ -9,7 +9,7 @@ const TabComponent = () => {
     name: "Emran",
     age: "20",
     email: "name@email.com",
-    interests: ["Music", "Coding"],
+    interests: ["music", "coding"],
   })
   const tabs = [
     {
@@ -36,7 +36,7 @@ const TabComponent = () => {
         {tabs.map((item, index) => {
           return (
 
-            <div key={item.id} onClick={() => SetIsActive(index)} className='tab-item'>{item.name}</div>
+            <div key={index} onClick={() => SetIsActive(index)} className='tab-item'>{item.name}</div>
           )
         })}
 

@@ -19,12 +19,20 @@ function Profile({ data, setData }) {
       </div>
       <div>
         <label> Age:</label>
-        <input type="text" value={age} />
+        <input
+          type="text"
+          value={age}
+          onChange={(e) => handleChange(e, "age")}
+        />
       </div>
 
       <div>
         <label> email:</label>
-        <input type="text" value={email} />
+        <input
+          type="text"
+          value={email}
+          onChange={(e) => handleChange(e, "email")}
+        />
       </div>
     </div>
   );

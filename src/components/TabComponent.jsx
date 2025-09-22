@@ -3,6 +3,7 @@ import Settings from './ui/Settings'
 import Interests from './ui/Interests'
 import { useState } from 'react'
 
+
 const TabComponent = () => {
   const [isActive, SetIsActive] = useState(0)
   const [data, setData] = useState({

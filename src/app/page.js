@@ -6,10 +6,12 @@ import useTreeTraversal from "@/hooks/useTreeTraversal";
 import { useState } from "react";
 import SearchFilter from "@/components/SearchFilter";
 import TabComponent from "@/components/TabComponent";
+import ProgressBar from "@/components/ProgressBar";
 
 export default function Home() {
   const [explorerData, setExplorerData] = useState(data);
   const { insertFolder } = useTreeTraversal();
+  const bar = [1, 10, 20, 40, 60, 80, 100];
 
   const handleInsertNode = (folderId, item, isFolder) => {
     const finaleTree = insertFolder(explorerData, folderId, item, isFolder);
@@ -31,6 +33,11 @@ export default function Home() {
       <div style={{ marginTop: "20px" }}>
         <h1>Tab Component</h1>
         <TabComponent />
+      </div>
+      <div>
+        {bar.map((item) => (
+          <ProgressBar key={item} progress={item} />
+        ))}
       </div>
     </div>
   );
